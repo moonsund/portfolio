@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Your Name</title>
+  <meta name="description" content="One-page portfolio: about, experience, education, projects, skills, contact." />
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#about" aria-label="Go to About" id="brandName"></a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list" id="desktopNav"></ul>
+      </nav>
+
+      <button
+        class="burger"
+        id="burgerBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobilePanel"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+        <nav aria-label="Mobile navigation">
+          <ul class="nav-list" id="mobileNav"></ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <div class="container">
+
+      <!-- About -->
+      <section class="hero" id="about" aria-label="About">
+        <div class="avatar" aria-label="Profile photo">
+          <!-- Replace photoSrc in JS below (e.g., "./me.jpg") -->
+          <img id="profilePhoto" src="" alt=""
+               onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='grid';" />
+          <div id="avatarFallback" class="avatar-fallback" style="display:grid;">YN</div>
+        </div>
+
+        <h1 id="name"></h1>
+        <div class="role" id="headline"></div>
+
+        <p class="lead" id="aboutText"></p>
+
+        <div class="icon-links" aria-label="Links">
+          <a class="icon-link" id="emailLink" href="mailto:you@example.com" aria-label="Email">
+            <span class="icon" aria-hidden="true" id="iconEmail"></span>
+            <span>Email</span>
+          </a>
+          <a class="icon-link" id="linkedinLink" href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <span class="icon" aria-hidden="true" id="iconLinkedIn"></span>
+            <span>LinkedIn</span>
+          </a>
+          <a class="icon-link" id="githubLink" href="#" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <span class="icon" aria-hidden="true" id="iconGitHub"></span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Experience (stacked) -->
+      <section id="experience" aria-label="Experience">
+        <div class="section-head">
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Where I've worked</p>
+        </div>
+        <div class="stack" id="experienceGrid"></div>
+      </section>
+
+      <!-- Education (stacked) -->
+      <section id="education" aria-label="Education">
+        <div class="section-head">
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic background</p>
+        </div>
+        <div class="stack" id="educationGrid"></div>
+      </section>
+
+      <!-- Projects (3 per row on desktop) -->
+      <section id="projects" aria-label="Projects">
+        <div class="section-head">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Things I've built</p>
+        </div>
+        <div class="grid-three" id="projectsGrid"></div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" aria-label="Technical Skills">
+        <div class="section-head">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+        </div>
+        <div class="skills-wrap" id="skillsGrid"></div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-label="Contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p id="contactText"></p>
+
+        <button class="cta" id="sayHelloBtn" type="button" aria-label="Say Hello">
+          <span class="icon" aria-hidden="true" id="iconMailWhite"></span>
+          <span>Say Hello</span>
+        </button>
+
+        <!-- <div class="contact-icons" aria-label="Contact links">
+          <a id="contactLinkedIn" href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <span class="icon" aria-hidden="true" id="iconLinkedIn2"></span>
+          </a>
+          <a id="contactGitHub" href="#" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <span class="icon" aria-hidden="true" id="iconGitHub2"></span>
+          </a>
+          <a id="contactEmail" href="mailto:you@example.com" aria-label="Email">
+            <span class="icon" aria-hidden="true" id="iconEmail2"></span>
+          </a>
+        </div> -->
+      </section>
+
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      © <span id="year"></span> <span id="footerName"></span>. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
