@@ -66,11 +66,11 @@ const education = [
 
 const projects = [
   {
-    name: "Task Management App",
+    name: "Minishell",
     description:
-      "A full-stack task management application with real-time updates, team collaboration, and analytics dashboard.",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    url: "https://example.com"
+      "Unix-like shell that parses user input, handles pipes and redirections, executes built-in and external commands, and manages environment variables and processes similarly to bash.",
+    tags: ["C",],
+    url: "https://github.com/moonsund/minishell"
   },
   {
     name: "E-commerce Platform",
@@ -343,7 +343,7 @@ function renderProjects() {
       rel: "noreferrer",
       "aria-label": `View Project: ${project.name}`
     }, [
-      "View Project ",
+      "View Project on GitHub ",
       el("span", { class: "icon", "aria-hidden": "true" }, [])
     ]) : null;
 
