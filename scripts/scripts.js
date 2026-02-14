@@ -49,10 +49,10 @@ const experience = [
 
 const education = [
   {
-    title: "M.Sc. Computer Science",
-    org: "University of Technology",
+    title: "B.Sc. Finance and Credit",
+    org: "Russian State University for the Humanities",
     period: "2016 — 2018",
-    description: "Focused on distributed systems and web technologies.",
+    description: "Finance and Credit",
     tags: []
   },
   {
